@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belly Button Biodiversity Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/flatly/bootstrap.min.css">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+                <div class="col-md-12 jumbotron text-center bg-primary text-white">
+                    <h1>Belly Button Biodiversity Dashboard</h1>
+                    <p>Use the interactive charts below to explore the dataset</p>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Select Sample:</h3>
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary mb-3 text-center">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Sample MetaData</h3>
+                    </div>
+                    <div id="sample-metadata" class="card-text text-center"></div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="pie"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bubble"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/index.js" type="text/javascript"></script>
+</body>
+</html>
